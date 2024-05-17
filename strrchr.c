@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   strrchr.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ycharnia <ycharnia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 17:27:18 by ycharnia          #+#    #+#             */
-/*   Updated: 2024/03/15 21:16:31 by ycharnia         ###   ########.fr       */
+/*   Updated: 2024/05/10 17:16:27 by ycharnia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,17 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t			i;
-	const char		*init;
+	int	i;
 
-	init = s;
-	i = ft_strlen(s);
-	s = s + i;
-	while (*s != *init && *s != c)
-		s--;
-	if (*s == c)
-		return ((char *)s);
+	i = 0;
+	while (s[i])
+		i++;
+	while (i >= 0)
+	{
+		if (s[i] == (char)c)
+			return ((char *)(s + i));
+		i--;
+	}
 	return (0);
 }
 

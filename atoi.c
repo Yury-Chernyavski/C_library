@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdlib.h>
-// #include <stdio.h>
-
 int	ft_atoi(const char *nptr)
 {
 	unsigned int	num;

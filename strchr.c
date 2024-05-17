@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   strchr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ycharnia <ycharnia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 15:26:58 by ycharnia          #+#    #+#             */
-/*   Updated: 2024/03/21 20:28:23 by ycharnia         ###   ########.fr       */
+/*   Updated: 2024/05/10 17:14:53 by ycharnia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <string.h>
-// #include <stdio.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0' && *s != c)
+	while (*s != (char)c)
+	{
+		if (!*s)
+			return (NULL);
 		s++;
-	if (*s == c)
-		return ((char *)s);
-	return (0);
+	}
+	return ((char *)s);
 }
 
 /* 

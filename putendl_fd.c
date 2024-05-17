@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ycharnia <ycharnia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 15:30:15 by ycharnia          #+#    #+#             */
-/*   Updated: 2024/03/14 18:08:03 by ycharnia         ###   ########.fr       */
+/*   Created: 2024/05/10 17:12:45 by ycharnia          #+#    #+#             */
+/*   Updated: 2024/05/10 17:12:51 by ycharnia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
-{
-	if (c >= 32 && c <= 126)
-		return (c);
-	return (0);
-}
-/* 
-int	main(void)
-{
-	int	c = '\0';
+#include "libft.h"
 
-	printf("%i \n", ft_isprint(c));
-	printf("%i \n", isprint(c));
+void	ft_putendl_fd(char *s, int fd)
+{
+	while (*s != '\0')
+		write(fd, s++, 1);
+	write(fd, "\n", 1);
 }
- */

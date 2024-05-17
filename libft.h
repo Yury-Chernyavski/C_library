@@ -6,18 +6,14 @@
 /*   By: ycharnia <ycharnia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 16:45:48 by ycharnia          #+#    #+#             */
-/*   Updated: 2024/03/21 20:54:53 by ycharnia         ###   ########.fr       */
+/*   Updated: 2024/05/10 17:09:46 by ycharnia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stddef.h>
-# include <stdio.h>
-# include <ctype.h>
-# include <string.h>
-# include <string.h>
 # include <stdlib.h>
+# include <stdint.h>
 # include <unistd.h>
 
 int		ft_isalpha(int c);
